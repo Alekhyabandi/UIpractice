@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Image Change on Hover</title>
+  <link rel="stylesheet" href="styles.css">
+
+function changeImage(state) {
+  var image = document.getElementById('myImage');
+  if (state === 'hovered') {
+    image.src = 'hovered.jpg'; // Replace 'hovered.jpg' with the path to your hovered image
+  } else {
+    image.src = 'original.jpg'; // Replace 'original.jpg' with the path to your original image
+  }
+}
+</head>
+<body>
+
+  <div id="imageContainer" onmouseover="changeImage('hovered')" onmouseout="changeImage('original')">
+    <img id="myImage" src="original.jpg" alt="Original Image">
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

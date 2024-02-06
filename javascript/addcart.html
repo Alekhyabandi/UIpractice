@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add mobiles to cart</title>
+    <style>
+        
+        .container {
+            display:inline-block;
+            width: 200px;            height: 500px;
+            border: 1px solid black;
+            border-radius: 10px;
+            background-color: bisque;
+            margin-left: 25px;
+            margin-top: 50px;
+            
+
+        }
+
+        .image {
+            width: 150px;
+            height: 250px;
+            
+            border: 1px solid blue;
+            margin-left: 25px;
+            margin-top: 25px;
+
+        }
+
+        .title {
+            text-align: center;
+            cursor: pointer;
+            color: black;
+            background-color: azure;
+            border-radius: 6px;
+            font-size: 25px;
+            margin-left: 35px;
+            margin-top: 25px;
+            width: 120px;
+            height: 35px;
+            border: 1px solid black;
+
+        }
+
+        #cart {
+            width: 50px;
+            height: 50px;
+            border: 1px solid black;
+            background-color: burlywood;
+            border-radius: 50%;
+            position: absolute;
+            top: 20px;
+            right: 30px;
+            text-align: center;
+            font-size: 40px;
+            font-weight: bold;
+
+
+        }
+        
+        #totalprice {
+            width: 50px;
+            height: 50px;
+            top: 20px;
+            right: 30px;
+            text-align:center;
+            font-size: 40px;
+            font-weight: bold;
+
+
+
+
+        }
+
+
+        
+
+        .qty {
+            margin-top: 10px;
+            margin-left: 35px;
+        }
+    </style>
+    <script>
+        
+        
+        function addme(a){
+            let qty
+            if(a==1){
+                 qty = document.getElementById('qty1').value;
+                 document.getElementById('qty1').value = 1;
+            }
+            if(a==2){
+                 qty = document.getElementById('qty2').value;
+                 document.getElementById('qty2').value = 1;
+            }
+            if(a==3){
+                 qty = document.getElementById('qty3').value;
+                 document.getElementById('qty3').value = 1;
+            }
+            let cart = document.getElementById('cart').innerHTML;
+          
+            alert(qty)
+            cart = Number(cart);
+            qty=Number(qty)
+            document.getElementById('cart').innerHTML= cart+qty ;
+            
+    
+
+        }
+            
+            
+    
+        
+        
+
+        
+    </script>
+</head>
+<body>
+  <div class="container">
+    <div class="image"><img src="mobile1.jpeg" width="100%" height="80%"><center>iPhone</center></div>
+    <div class="price">
+        <div class="price" id="price"></div>
+    <p>price:1000</p>
+    <div class="qty">
+    <select name="qty" id="qty1">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+    </select>
+    
+    <button onclick="addme(1)">add me</button>
+</div>
+</div>
+</div>
+<div class="container">
+<div class="image"><img src="mobile2.jpeg" width="100%" height="80%"><center>iPhone</center></div>
+<div class="price">
+    <div class="price" id="price2"></div>
+    <p>price:2000</p>
+    <div class="qty">
+    <select name="qty" id="qty2">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+    </select>
+    <button onclick="addme(2)">add me</button>
+    </div>
+</div>
+</div>
+<div class="container">
+    <div class="image"><img src="mobile3.jpeg" width="100%" height="80%"><center>Samsung</center></div>
+    <div class="price">
+        <div class="price" id="price"></div>
+    <p>price:3000</p>
+    <div class="qty">
+    <select name="qty" id="qty3">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+    </select>
+
+    <button onclick="addme(2)">add me</button>
+
+  </div>
+</div>
+</div>
+<h1 id="cart">0</h1>    
+<h2 id="totalprice">totalprice:0</h2>
+
+
+</body>
+</html>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <style>
+        .container{
+            display: flex;
+        }
+    
+       .bwatch{
+
+        visibility:hidden;
+        position: absolute;
+        top: 50px;
+        left: 200px;
+        width: 200px;
+        height: 200px;
+       }     
+
+        
+        
+    </style>
+    <script>
+        function bwatch(a){
+            if(a==1){
+                document.getElementById("big1").style.visibility = "visible";
+                document.getElementById("big2").style.visibility = "hidden";
+                document.getElementById("big3").style.visibility = "hidden";
+                document.getElementById("big4").style.visibility = "hidden";
+                document.getElementById("big5").style.visibility = "hidden";
+
+
+            }
+
+        else if(a==2){
+            document.getElementById("big2").style.visibility = "visible";
+                document.getElementById("big1").style.visibility = "hidden";
+                document.getElementById("big3").style.visibility = "hidden";
+                document.getElementById("big4").style.visibility = "hidden";
+                document.getElementById("big5").style.visibility = "hidden";
+
+        }
+
+        else if(a==3){
+            document.getElementById("big3").style.visibility = "visible";
+                document.getElementById("big2").style.visibility = "hidden";
+                document.getElementById("big1").style.visibility = "hidden";
+                document.getElementById("big4").style.visibility = "hidden";
+                document.getElementById("big5").style.visibility = "hidden";
+
+
+        }
+        else if(a==4){
+            document.getElementById("big4").style.visibility = "visible";
+                document.getElementById("big2").style.visibility = "hidden";
+                document.getElementById("big3").style.visibility = "hidden";
+                document.getElementById("big1").style.visibility = "hidden";
+                document.getElementById("big5").style.visibility = "hidden";
+
+
+    }
+    else if (a==5){
+        document.getElementById("big5").style.visibility = "visible";
+                document.getElementById("big2").style.visibility = "hidden";
+                document.getElementById("big3").style.visibility = "hidden";
+                document.getElementById("big4").style.visibility = "hidden";
+                document.getElementById("big1").style.visibility = "hidden";
+
+
+    }
+}
+
+    </script>
+       
+    
+    
+    
+</head>
+<body>
+    <div class="container">
+        <div class="smallimages">
+
+<div id="image1" onmouseover="bwatch(1)"><img src="watch1.jpg"></div>
+<div id="image2" onmouseover="bwatch(2)"><img src="watch2.jpg"></div>
+<div id="image3" onmouseover="bwatch(3)"><img src="watch3.jpg"></div>
+<div id="image4" onmouseover="bwatch(4)"><img src="watch4.jpg"></div>
+<div id="image5" onmouseover="bwatch(5)"><img src="watch5.jpg"></div>
+ </div> 
+
+
+<div class="bigimages">
+    <div id="big1" class="bwatch" style="visibility: visible;" ><img src="bwatch1.jpg" ></div>
+    <div id="big2" class="bwatch"><img src="bwatch2.jpg" ></div>
+    <div id="big3" class="bwatch"><img src="bwatch3.jpg" ></div>
+    <div id="big4" class="bwatch"><img src="bwatch4.jpg" ></div>
+    <div id="big5" class="bwatch"><img src="bwatch5.jpg" ></div>
+</div>
+
+        
+    </div>
+</body>
+</html>
